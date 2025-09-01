@@ -8,4 +8,6 @@
 
 **NoSQL_1st_100_entries.pdf** - Report that shows the first 100 rows in the DynamoDB Database
 
+**S3_Contents.pdf** - Report that shows the contents of the S3 Data Lake
+
 **code folder** - Contains all of the application code
