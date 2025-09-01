@@ -1,0 +1,40 @@
+[theme]
+#primaryColor="#F63366"
+primaryColor="#47C7DA"
+backgroundColor="#F0F2F6"
+#secondaryBackgroundColor="#006bb5"
+secondaryBackgroundColor="#0073c2"
+textColor="#262730"
+font="sans serif"
+
+#[theme]
+#old
+#primaryColor="#F63366"
+#primaryColor="#47C7DA"
+#backgroundColor="#d6f2ff"
+#secondaryBackgroundColor="#F0F2F6"
+#textColor="#262730"
+#font="sans serif"
+
+#[theme]
+#base="light"
+#secondaryBackgroundColor="#9ad8e1"
+
+#[theme]
+##primaryColor="#F63366"
+#primaryColor="#47C7DA"
+#backgroundColor="#F0F2F6"
+#secondaryBackgroundColor="#d6f2ff"
+#textColor="#262730"
+#font="sans serif"
+
+[server]
+#port = 8080
+headless = true
+enableStaticServing = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+showErrorDetails = false

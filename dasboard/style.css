@@ -1,0 +1,130 @@
+/* Logo */
+[data-testid="stSidebarHeader"] {
+              background-image: url(./app/static/banner.png););
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+/*Title*/
+
+
+/* Remove arrow down metric */
+/* [data-testid="stMetricDelta"] svg {
+    display: none;
+} */
+
+/* Remove footer */
+footer {visibility: hidden;}
+
+
+/* Card */
+/* Adapted from https://startbootstrap.com/theme/sb-admin-2 */
+[data-testid="stMetric"] {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    padding: 0% 4% 2% 4%;
+    border-radius: 5px;
+
+    border-left: 0.5rem solid #0073c2 !important; /* shadow color */
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.3) !important;
+    cursor: pointer;
+
+    /* Add these for a smooth pop-up effect */
+    transition: transform 0.15s ease-in-out,
+                box-shadow 0.15s ease-in-out;
+    will-change: transform, box-shadow;
+
+}
+
+[data-testid="stMetric"]:hover {
+    /* Slightly lift the card */
+    transform: translateY(-0.2rem) scale(1.03);
+    /* Intensify the shadow */
+    box-shadow: 0 0.65rem 2.15rem 0 rgba(58, 59, 69, 0.35) !important;
+    /* Optional: bring it above siblings */
+    z-index: 10;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #004570 !important; /* label color */
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+}
+
+/* Move block container higher */
+div.stMainBlockContainer.block-container.st-emotion-cache-1jicfl2.ea3mdgi5{
+  margin-top: -100px;
+}
+
+
+
+/* Hide hamburger menu and footer */
+div.css-14xtw13.e8zbici0 {
+  display: none;
+}
+
+footer.css-ipbk5a.egzxvld4 {
+  display: none;
+}
+
+footer.css-12gp8ed.eknhn3m4 {
+  display: none;
+}
+
+div.vg-tooltip-element {
+  display: none;
+}
+
+[data-testid="stHeader"] {
+  display: none;
+}
+
+/* Markdown header color */
+span.css-10trblm.e16nr0p30 {
+    color: #004570 !important; /* label color */
+    font-weight: bold !important;
+}
+
+
+textarea {
+    -webkit-text-fill-color: rgb(38, 39, 48) !important;
+}
+
+
+/* add indent */
+[data-baseweb="select"]> div:first-child {
+  background-color: #FFFFFF;
+  border-color: #2d408d;
+}
+
+[data-testid="stWidgetLabel"] {
+  margin-top: -1rem;
+  padding-left: 50px;
+  color: white;
+}
+
+div[data-testid="stMarkdownContainer"].st-emotion-cache-le7ohw.e1nzilvr5 > p {
+    color: #004570 !important; /* label color */
+    font-weight: bold !important;
+    font-size: larger;
+    /* text-transform: uppercase !important; */
+}
+
+.stMultiSelect div[class~="st-db"] {
+  background-color: white !important;
+}
+
+[data-testid="stBaseButton-segmented_control"]:hover {
+  color: #0073c2 !important;
+  border-color: #0073c2 !important;
+}
+
+[data-testid="stBaseButton-segmented_controlActive"] {
+  color: #0073c2 !important;
+  border-color: #0073c2 !important;
+  background-color: rgba(0, 115, 194, 0.1) !important;
+}
+
+[data-testid="stSidebarUserContent"] {
+ margin-top: 2rem; 
+}

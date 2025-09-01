@@ -1,0 +1,67 @@
+-- Dimension tables (replicated across nodes)
+CREATE TABLE dim_author (
+    author_sk INT IDENTITY(1,1),
+    author_fullname VARCHAR(256),
+    author VARCHAR(256),
+    author_premium BOOLEAN,
+    etl_date DATE,
+    PRIMARY KEY(author_fullname, etl_date)
+)
+DISTSTYLE ALL;
+
+CREATE TABLE dim_subreddit (
+    subreddit_sk INT IDENTITY(1,1),
+    subreddit_id VARCHAR(256),
+    subreddit_name_prefixed VARCHAR(256),
+    subreddit_type VARCHAR(64),
+    subreddit_subcribers BIGINT,
+    etl_date DATE,
+    PRIMARY KEY(subreddit_id, etl_date)
+)
+DISTSTYLE ALL;
+
+-- Fact tables (large, partition-like sort on date)
+CREATE TABLE fact_post (
+    post_name VARCHAR(256),
+    date_key INT,
+    subreddit_sk INT,
+    author_sk INT,
+    score INT,
+    upvote_ratio FLOAT4,
+    num_comments INT,
+    sentiment_score FLOAT4,
+    etl_date DATE,
+    PRIMARY KEY(post_name, etl_date)
+)
+DISTKEY(post_name)
+SORTKEY(etl_date);
+
+CREATE TABLE fact_comment (
+    comment_name VARCHAR(256),
+    post_name VARCHAR(256),
+    date_key INT,
+    subreddit_sk INT,
+    author_sk INT,
+    score INT,
+    sentiment_score FLOAT4,
+    etl_date DATE,
+    PRIMARY KEY(comment_name, etl_date)
+)
+DISTKEY(post_name)
+SORTKEY(etl_date);
+
+-- Date dimension
+CREATE TABLE dim_date (
+    date_key INT,
+    date_value DATE,
+    year INT,
+    month INT,
+    day INT,
+    dow INT,
+    month_name VARCHAR(20),
+    dow_name VARCHAR(20),
+    is_weekend BOOLEAN,
+    etl_date DATE,
+    PRIMARY KEY(date_key, etl_date)
+)
+DISTSTYLE ALL;

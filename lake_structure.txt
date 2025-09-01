@@ -1,0 +1,13 @@
+s3://deds2025b-proj-oncolens/       
+    bronze/reddit/dt=YYYY-MM-DD/subreddit=<name>/run_id=<ts>/{posts,comments}.jsonl.gz
+    silver/reddit/
+      posts/dt=YYYY-MM-DD/subreddit=<name>/part-*.parquet
+      comments/dt=YYYY-MM-DD/subreddit=<name>/part-*.parquet
+      authors/dt=YYYY-MM-DD/part-*.parquet
+      subreddits/dt=YYYY-MM-DD/part-*.parquet
+    gold/reddit/
+      post_enriched/dt=YYYY-MM-DD/subreddit=<name>/part-*.parquet   # + sentiment, tags, model_version, scored_at
+      comment_enriched/dt=YYYY-MM-DD/subreddit=<name>/part-*.parquet
+    marts/                
+      daily_subreddit_sentiment/dt=YYYY-MM-DD/part-*.parquet
+      top_posts/dt=YYYY-MM-DD/part-*.parquet
